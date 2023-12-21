@@ -37,4 +37,4 @@ def index():
         result = response.choices[0].message.content
         
 
-    return render_template('index.html', result=result)
+    return render_template('Index.html', result=result)
