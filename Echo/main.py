@@ -9,6 +9,7 @@ import os
 app = Flask(__name__)
 
 
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     result = None 
@@ -34,7 +35,9 @@ def index():
                 {"role": "user", "content": transcript.text}
             ]
         )
+
+        
         result = response.choices[0].message.content
         
 
-    return render_template('Index.html', result=result)
+    return render_template('index.html', result=result)
